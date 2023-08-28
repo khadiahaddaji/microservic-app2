@@ -7,3 +7,8 @@ pool:
   name: Default
   demands:
     - agent.name -equals Default 
+steps:
+#   - script: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+#             curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+#             az --version  # Vérification de l'installation
+#     displayName: 'Install Azure CLI on Linux' 
