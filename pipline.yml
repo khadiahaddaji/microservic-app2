@@ -1,0 +1,9 @@
+trigger:
+  branches:
+    include:
+      - master  # Change this to your branch name if not using 'main'/
+
+pool:
+  name: Default
+  demands:
+    - agent.name -equals Default 
