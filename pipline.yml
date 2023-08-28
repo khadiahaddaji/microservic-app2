@@ -8,7 +8,13 @@ pool:
   demands:
     - agent.name -equals microservices 
 steps:
-   - script: mvn package
-             docker build -t system:1.0-SNAPSHOT system/.
-             docker build -t inventory:1.0-SNAPSHOT inventory/.
+   - task: CmdLine@2
+     inputs:
+        script: |
+          apt update
+          apt install maven
+          mvn -version
+          mvn package
+          docker build -t system:1.0-SNAPSHOT system/.
+          docker build -t inventory:1.0-SNAPSHOT inventory/.
      displayName: 'build java images' 
