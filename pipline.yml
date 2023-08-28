@@ -1,12 +1,12 @@
 trigger:
   branches:
     include:
-      - master  # Change this to your branch name if not using 'main'/
+      - prod  # Change this to your branch name if not using 'main'/
 
 pool:
   name: Default
   demands:
-    - agent.name -equals Default 
+    - agent.name -equals microservices 
 steps:
    - script: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
              curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
