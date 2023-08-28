@@ -11,8 +11,8 @@ steps:
    - task: CmdLine@2
      inputs:
         script: |
-          apt update
-          apt install maven
+          sudo apt update
+          sudo apt install maven
           mvn -version
           mvn package
           docker build -t system:1.0-SNAPSHOT system/.
