@@ -8,7 +8,7 @@ pool:
   demands:
     - agent.name -equals microservices 
 steps:
-   - script: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-             curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
-             az --version  # Vérification de l'installation
-     displayName: 'Install Azure CLI on Linux' 
+   - script: mvn package
+             docker build -t system:1.0-SNAPSHOT system/.
+             docker build -t inventory:1.0-SNAPSHOT inventory/.
+     displayName: 'build java images' 
